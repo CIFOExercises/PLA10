@@ -1,0 +1,96 @@
+/** GENERAL **/
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+main {
+    background-color: #D3D3D3;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/** UTILS **/
+
+.container {
+    max-width: 140rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#selected-images,
+#gallery {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.remove-item {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    height: 20px;
+}
+
+#lightbox {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox>img:nth-of-type(2) {
+    width: 50%;
+}
+
+img.prev,
+img.next {
+    width: 5rem;
+}
+
+img.next {
+    transform: rotate(180deg);
+}
